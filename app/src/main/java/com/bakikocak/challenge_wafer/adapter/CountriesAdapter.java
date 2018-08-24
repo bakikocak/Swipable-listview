@@ -1,4 +1,4 @@
-package adapter;
+package com.bakikocak.challenge_wafer.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -14,7 +13,7 @@ import com.bakikocak.challenge_wafer.R;
 
 import java.util.ArrayList;
 
-import model.Country;
+import com.bakikocak.challenge_wafer.model.Country;
 
 public class CountriesAdapter extends ArrayAdapter<Country> {
 

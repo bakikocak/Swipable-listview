@@ -14,6 +14,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.bakikocak.challenge_wafer.adapter.CountriesAdapter;
+import com.bakikocak.challenge_wafer.model.Country;
+import com.bakikocak.challenge_wafer.utils.HttpHandler;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -21,9 +25,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import adapter.CountriesAdapter;
-import model.Country;
-import utils.HttpHandler;
+
 
 public class MainActivity extends AppCompatActivity {
 

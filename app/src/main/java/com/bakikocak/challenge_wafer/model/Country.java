@@ -1,4 +1,4 @@
-package model;
+package com.bakikocak.challenge_wafer.model;
 
 public class Country {
 
