@@ -17,9 +17,13 @@ MotionEvent.ACTION_MOVE and MotionEvent.ACTION_UP cases:
   <li>Clicking/Swiping any other row should cancel the current swipe</li>
 </ul>  
 
-Note that anchor point is decided as 1/4 of a single item row.
+Notes:
+<ul>
+  <li>Anchor point is decided as 1/4 of a single item row.</li>
+  <li>API call was made using AsyncTask since 3rd party library is not allowed.</li>
+  <li>More info provided within the comments.</li>
+</ul>
 
-More info provided within the comments.
 
 ![Alt text](screenshots/swipe.png)
 
