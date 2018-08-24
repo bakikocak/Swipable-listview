@@ -30,51 +30,32 @@ public class CountriesAdapter extends ArrayAdapter<Country> {
     }
 
     @Override
-    public View getView(final int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent)
+    {
+        LayoutInflater inflater = LayoutInflater.from(context);
 
-        /*
-            // Get the data item for this position
-                User user = getItem(position);
-       // Check if an existing view is being reused, otherwise inflate the view
-       if (convertView == null) {
-          convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_user, parent, false);
-       }
-       // Lookup view for data population
-       TextView tvName = (TextView) convertView.findViewById(R.id.tvName);
-       TextView tvHome = (TextView) convertView.findViewById(R.id.tvHome);
-       // Populate the data into the template view using the data object
-       tvName.setText(user.name);
-       tvHome.setText(user.hometown);
-       // Return the completed view to render on screen
-       return convertView;
+        View v = inflater.inflate(R.layout.list_item, parent, false);
 
-         */
-        if (convertView == null) {
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
-        }
+        TextView name = (TextView) v.findViewById(R.id.tv_name);
+        TextView language = (TextView) v.findViewById(R.id.tv_language);
+        TextView currency = (TextView) v.findViewById(R.id.tv_currency);
+        RelativeLayout swipeableRl = (RelativeLayout) v.findViewById(R.id.rl_main);
+        ImageView bombImage = (ImageView) v.findViewById(R.id.iv_bomb);
 
-        TextView nameTv = (TextView) convertView.findViewById(R.id.tv_name);
-        TextView languageTv = (TextView) convertView.findViewById(R.id.tv_language);
-        TextView currencyTv = (TextView) convertView.findViewById(R.id.tv_currency);
-        RelativeLayout swipeableRl = (RelativeLayout) convertView.findViewById(R.id.rl_main);
-        ImageView bombImage = (ImageView) convertView.findViewById(R.id.iv_bomb);
-
-        nameTv.setText(getItem(position).getName());
-        languageTv.setText(context.getString(R.string.language_title) + " " + getItem(position).getLanguage());
-        currencyTv.setText(context.getString(R.string.currency_title) + " " + getItem(position).getCurrency());
+        name.setText(getItem(position).getName());
+        language.setText(getItem(position).getLanguage());
+        currency.setText(getItem(position).getCurrency());
         swipeableRl.bringToFront();
         swipeableRl.setOnTouchListener(mTouchListener);
 
-
-        final View finalConvertView = convertView;
         bombImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                deleteRow(finalConvertView, position);
+                deleteRow(view, position);
             }
         });
 
-        return convertView;
+        return v;
     }
 
     private void deleteRow(final View v, final int position) {
