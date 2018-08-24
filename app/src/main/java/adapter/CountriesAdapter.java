@@ -43,8 +43,8 @@ public class CountriesAdapter extends ArrayAdapter<Country> {
         ImageView bombImage = (ImageView) v.findViewById(R.id.iv_bomb);
 
         name.setText(getItem(position).getName());
-        language.setText(getItem(position).getLanguage());
-        currency.setText(getItem(position).getCurrency());
+        language.setText(context.getString(R.string.language_title) + " " + getItem(position).getLanguage());
+        currency.setText(context.getString(R.string.currency_title) + " " + getItem(position).getCurrency());
         swipeableRl.bringToFront();
         swipeableRl.setOnTouchListener(mTouchListener);
 
