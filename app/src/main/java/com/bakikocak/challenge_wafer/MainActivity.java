@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
     //Swiping variables
     private boolean isSwiping = false; // detects if user is swiping on ACTION_UP
-    private static final float FAST_SWIPE_VELOCITY = 10000; // needed for velocity implementation
+    private static final float FAST_SWIPE_VELOCITY = 3000; // needed for velocity implementation
     HashMap<Long, Integer> mItemIdTopMap = new HashMap<>();
 
 
