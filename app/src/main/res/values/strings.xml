@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">challenge_wafer</string>
+    <string name="app_name">Wafer Challenge</string>
+    <string name="language_title">Language: </string>
+    <string name="currency_title">Currency: </string>
 </resources>

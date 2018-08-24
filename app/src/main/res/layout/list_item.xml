@@ -1,13 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent">
 
-    <TextView
+    <RelativeLayout
+        android:id="@+id/rl_main"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:id="@+id/list_tv"
-        android:background="#651bc9"
-        android:textColor="#FFFFFF"/>
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:paddingLeft="@dimen/margin16"
+        android:paddingTop="@dimen/margin8"
+        android:paddingBottom="@dimen/margin8">
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textSize16" />
+
+        <TextView
+            android:id="@+id/tv_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textSize12"
+            android:layout_below="@+id/tv_name" />
+
+        <TextView
+            android:id="@+id/tv_currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textSize12"
+            android:layout_below="@+id/tv_language" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_bomb"
+        android:layout_width="@dimen/size48"
+        android:layout_height="@dimen/size48"
+        android:layout_marginEnd="@dimen/margin16"
+        android:layout_gravity="end|center_vertical"
+        android:src="@drawable/bomb" />
+
+
+</FrameLayout>
