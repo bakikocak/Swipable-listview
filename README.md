@@ -1,4 +1,4 @@
-# challenge_wafer
+# Swipable-listview
 
 This example consists of a listView with custom swipe feature using OnTouchListener.
 
